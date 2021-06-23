@@ -1,0 +1,467 @@
+[2021-05-08 23:22:32,912] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:22:32,913] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-08 23:24:07,690] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:24:07,690] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:24:07,696] ERROR in root: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075a39a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1075a39a0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075a39a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 114, in gateway
+    upstream_response = requests.request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075a39a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[2021-05-08 23:24:48,705] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:24:48,705] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:24:48,709] ERROR in root: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075210d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1075210d0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075210d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 114, in gateway
+    upstream_response = requests.request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075210d0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[2021-05-08 23:27:06,347] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:27:06,348] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:27:06,352] ERROR in root: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075d33a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1075d33a0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075d33a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 114, in gateway
+    upstream_response = requests.request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075d33a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[2021-05-08 23:27:47,901] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:27:47,901] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:27:47,904] ERROR in root: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075d3e20>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1075d3e20>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075d3e20>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 114, in gateway
+    upstream_response = requests.request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1075d3e20>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[2021-05-08 23:28:14,688] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:28:14,689] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:28:14,693] ERROR in root: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107650700>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x107650700>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107650700>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 114, in gateway
+    upstream_response = requests.request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107650700>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[2021-05-08 23:28:37,655] DEBUG in root: Requests logging enabled
+[2021-05-08 23:28:38,134] DEBUG in root: DM logging enabled
+[2021-05-08 23:28:49,077] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:28:49,078] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-08 23:29:46,110] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:29:46,112] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-08 23:31:03,069] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:31:03,070] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:31:03,074] ERROR in root: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10b656190>: Failed to establish a new connection: [Errno 61] Connection refused'))
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x10b656190>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 726, in urlopen
+    retries = retries.increment(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10b656190>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./gateway.py", line 114, in gateway
+    upstream_response = requests.request(
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/divya/opt/anaconda3/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5201): Max retries exceeded with url: /timeline/divyaa (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10b656190>: Failed to establish a new connection: [Errno 61] Connection refused'))
+[2021-05-08 23:31:16,592] DEBUG in root: Requests logging enabled
+[2021-05-08 23:31:17,094] DEBUG in root: DM logging enabled
+[2021-05-08 23:31:45,880] DEBUG in root: Requests logging enabled
+[2021-05-08 23:31:46,260] DEBUG in root: DM logging enabled
+[2021-05-08 23:32:20,311] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:32:20,311] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-08 23:32:40,479] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:32:40,479] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:35:26,666] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:35:26,666] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:39:46,609] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:39:46,609] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:39:48,135] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:39:48,135] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-08 23:39:49,769] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-08 23:39:49,769] DEBUG in root: Upstream URL: http://localhost:5201/timeline/divyaa
+[2021-05-09 23:04:01,250] DEBUG in root: Requests logging enabled
+[2021-05-09 23:04:01,814] DEBUG in root: DM logging enabled
+[2021-05-09 23:27:29,790] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-09 23:27:29,792] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-09 23:39:18,469] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-09 23:39:18,471] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-09 23:39:50,683] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-09 23:39:50,683] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-09 23:40:24,155] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-09 23:40:24,155] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-09 23:41:02,517] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-09 23:41:02,518] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-09 23:41:44,564] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-09 23:41:44,564] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-09 23:43:20,041] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-09 23:43:20,043] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-09 23:50:40,072] DEBUG in root: Requests logging enabled
+[2021-05-09 23:50:40,580] DEBUG in root: DM logging enabled
+[2021-05-09 23:53:33,363] DEBUG in root: Requests logging enabled
+[2021-05-09 23:53:33,983] DEBUG in root: DM logging enabled
+[2021-05-09 23:55:41,523] DEBUG in root: Requests logging enabled
+[2021-05-09 23:55:42,229] DEBUG in root: DM logging enabled
+[2021-05-10 00:02:10,925] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:02:10,929] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:02:28,366] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:02:28,366] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:08:38,772] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:08:38,773] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:10:25,074] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:10:25,075] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:10:45,997] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:10:45,997] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:11:05,580] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:11:05,582] DEBUG in root: Upstream URL: http://localhost:5201/timeline/trending
+[2021-05-10 00:12:38,835] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:12:38,836] DEBUG in root: Upstream URL: http://localhost:5202/timeline/trending
+[2021-05-10 00:13:17,765] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:14:44,707] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:15:37,136] DEBUG in root: Requests logging enabled
+[2021-05-10 00:15:37,798] DEBUG in root: DM logging enabled
+[2021-05-10 00:15:43,860] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:15:43,860] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:16:25,448] DEBUG in root: Requests logging enabled
+[2021-05-10 00:16:25,985] DEBUG in root: DM logging enabled
+[2021-05-10 00:16:34,627] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:16:34,628] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:16:49,011] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:16:49,012] DEBUG in root: Upstream URL: http://localhost:5201/timeline/trending
+[2021-05-10 00:17:28,222] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:17:28,225] DEBUG in root: Upstream URL: http://localhost:5202/timeline/trending
+[2021-05-10 00:18:14,196] DEBUG in root: Requests logging enabled
+[2021-05-10 00:18:14,817] DEBUG in root: DM logging enabled
+[2021-05-10 00:18:20,226] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:18:20,226] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:21:41,808] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:21:41,810] DEBUG in root: Upstream URL: http://localhost:5201/timeline/trending
+[2021-05-10 00:22:04,609] DEBUG in root: Requests logging enabled
+[2021-05-10 00:22:05,270] DEBUG in root: DM logging enabled
+[2021-05-10 00:22:11,482] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:22:11,482] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:24:35,693] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:24:35,695] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:25:02,065] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:25:02,066] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:27:17,120] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:27:17,124] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:27:17,908] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:28:22,450] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:28:22,451] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:29:14,155] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:29:14,156] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:31:53,757] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:31:53,758] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-10 00:32:04,678] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:32:04,681] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:33:38,460] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:33:38,461] DEBUG in root: Upstream URL: http://localhost:5200/timeline/divyaa
+[2021-05-10 00:33:43,508] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:33:43,509] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:35:30,796] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:35:30,797] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
+[2021-05-10 00:36:07,428] INFO in root: ('chuntttttt', 'Password115')
+[2021-05-10 00:36:07,430] DEBUG in root: Upstream URL: http://localhost:5200/timeline/trending
